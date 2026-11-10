@@ -29,15 +29,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="w-full overflow-hidden bg-white"
+      className="relative w-full overflow-hidden bg-white"
     >
-      {/* Main hero frame: Figma reference 1441 x 758 */}
-      <div className="relative mx-auto grid min-h-[758px] max-w-[1441px] grid-cols-1 lg:h-[758px] lg:min-h-0 lg:grid-cols-[56%_44%]">
+      {/* Desktop reference frame: 1441 x 758 */}
+      <div className="relative grid w-full grid-cols-1 lg:h-[758px] lg:grid-cols-[56%_44%]">
 
         {/* ======================================
-            LEFT: HERO CONTENT
+            LEFT CONTENT
         ====================================== */}
-        <div className="relative z-10 flex flex-col justify-center px-5 py-14 sm:px-10 md:px-12 lg:py-0 lg:pl-[6.8vw] lg:pr-0">
+        <div className="relative z-10 flex flex-col justify-center px-5 py-14 sm:px-10 md:px-12 lg:px-0 lg:pl-[6.8vw] lg:pr-0">
 
           {/* Intro badge */}
           <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-[#EEF5FF] px-3.5 py-2 text-sm font-medium text-[#1673E8]">
@@ -45,7 +45,7 @@ export default function Hero() {
             Comprehensive Dental Care
           </div>
 
-          {/* Main heading */}
+          {/* Heading */}
           <h1 className="max-w-[590px] text-[36px] font-bold leading-[1.16] tracking-[-1.5px] text-[#111827] sm:text-[44px] md:text-[48px] lg:text-[40px] xl:text-[54px]">
             Modern Dental Care
             <br />
@@ -62,9 +62,8 @@ export default function Hero() {
             modern technology in a comfortable, caring environment.
           </p>
 
-          {/* CTA buttons */}
+          {/* Action buttons */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
-
             <a
               href="#contact"
               className="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-[11px] bg-[#0969E8] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0758C7] sm:px-6 sm:text-base"
@@ -80,12 +79,10 @@ export default function Hero() {
               <Phone size={19} />
               Call Us
             </a>
-
           </div>
 
           {/* Trust statistics */}
           <div className="mt-9 grid max-w-[620px] grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4 sm:gap-x-2">
-
             {stats.map((stat, index) => {
               const Icon = stat.icon;
 
@@ -98,12 +95,12 @@ export default function Hero() {
                       : ""
                   }`}
                 >
-                  {/* Icon */}
+                  {/* Statistic icon */}
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EEF5FF] text-[#1673E8]">
                     <Icon size={20} strokeWidth={2} />
                   </div>
 
-                  {/* Text */}
+                  {/* Statistic text */}
                   <div className="min-w-0">
                     <p className="whitespace-nowrap text-sm font-bold text-[#172554] sm:text-[15px]">
                       {stat.value}
@@ -115,7 +112,6 @@ export default function Hero() {
                 </div>
               );
             })}
-
           </div>
         </div>
 
@@ -124,7 +120,7 @@ export default function Hero() {
         ====================================== */}
         <div className="relative hidden h-full lg:block">
 
-          {/* Light blue curved background */}
+          {/* Blue background accent */}
           <div
             className="absolute inset-0 bg-[#EEF5FF]"
             style={{
@@ -132,7 +128,7 @@ export default function Hero() {
             }}
           />
 
-          {/* Dental image with curved left edge */}
+          {/* Curved image */}
           <div
             className="absolute inset-0 overflow-hidden"
             style={{
@@ -151,7 +147,7 @@ export default function Hero() {
         </div>
 
         {/* ======================================
-            TABLET IMAGE
+            TABLET / MOBILE IMAGE
         ====================================== */}
         <div className="relative mx-auto mb-10 h-[380px] w-[calc(100%-40px)] max-w-[700px] overflow-hidden rounded-[28px] sm:h-[430px] lg:hidden">
           <Image
